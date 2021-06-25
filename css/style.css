@@ -1,5 +1,5 @@
 /* 
-font colors: #bbdde6, #440099
+font colors: #bbdde6, #440099, button color:#8013b3
 logo bg color, header color, shadow color, border color : #ea39ea
  border: 0.1rem solid #dfe1e5;
  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
@@ -53,7 +53,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #ea39ea;
+  background-color: white;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -66,10 +66,9 @@ header img {
 
 header .totalQty {
   margin-right: 5rem;
-  color: white;
   height: 4rem;
   width: 4rem;
-  border: 0.3rem solid white;
+  border: 0.3rem solid #440099;
   border-radius: 100%;
   text-align: center;
   cursor: context-menu;
@@ -102,7 +101,7 @@ LEFT SIDEBAR
 ===============================================
 */
 .leftSibar {
-  background-color: #ea39ea;
+  background-color: #0e0720;
   width: 5%;
   min-height: 100vh;
   position: fixed;
@@ -125,13 +124,14 @@ LEFT SIDEBAR
   top: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: #ea39ea;
+  background-color: #1b0a46;
   box-shadow: 0 0.8rem 3.2rem 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4rem);
 }
 
 .leftSibarPaper {
-  border: 0.1rem solid #ea39ea;
+  background-color: #1b0a46;
+  border: 0.1rem solid #bbdde6;
   position: absolute;
   left: 6.3rem;
   top: 0;
@@ -159,9 +159,14 @@ LEFT SIDEBAR
   margin: 3rem 1rem 3rem 0;
   padding: 1rem 1rem 1rem 0;
   width: 90%;
-  color: #440099;
+  color: #fff;
   cursor: pointer;
   transition: transform 450ms ease-in-out;
+}
+
+.leftSibarPaper ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .leftSibarPaper ul li:hover {
@@ -192,6 +197,7 @@ CONTENT SUMMARY
   justify-content: flex-start;
   margin-left: 5%;
   width: 100%;
+  background-color: #ececec;
 }
 
 /* 
@@ -282,8 +288,8 @@ tr:nth-of-type(odd) {
   background: #f8f8f8;
 }
 th {
-  background: #440099;
-  color: #bbdde6;
+  background: #1b0a46;
+  color: #fff;
   font-weight: bold;
 }
 td,
@@ -448,16 +454,25 @@ MODAL FOR UPDATING ITEMS
   transform: translateY(0%); /*hide*/
 }
 
+.content .row.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
 h1 {
   font-size: 2rem;
   color: #440099;
 }
 
-form.addItem {
+form {
   width: 100%;
-  align-content: center;
-  font-weight: 500;
-  color: #ea39ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .formGroup {
@@ -465,17 +480,17 @@ form.addItem {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
-  margin: 2rem 2rem 2rem 5rem;
+  width: 60%;
+  margin-top: 1rem;
+  color: #ea39ea;
 }
 
 .formGroup input,
 .formGroup textarea,
-.addItemBtn,
-.updateItemBtn,
-#category {
+.formGroup button,
+.formGroup select {
   width: 80%;
-  margin-top: 1rem;
+  margin: 1rem 0;
   padding: 1rem;
   outline: none;
   border: 0.1rem solid #dfe1e5;
@@ -483,51 +498,34 @@ form.addItem {
   transition: box-shadow 150ms ease-in-out;
 }
 
-#category {
-  width: 83.4%;
+.formGroup select {
+  width: 83%;
 }
 
 .formGroup input:hover,
-.formGroup textarea:hover,
-.addItemBtn:hover,
-.updateItemBtn:hover,
-#category:hover {
+.formGroup textarea:hover {
   border: 0.1rem solid #dfe1e5;
   box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
 }
 
-.addItemBtn,
-.updateItemBtn {
-  border: 0.1rem solid #ea39ea;
-  background-color: white;
-  color: #ea39ea;
-  width: 30%;
-  margin: 0 0rem 0 20rem;
-  cursor: pointer;
-  transition: all 450ms ease-in-out;
-}
-
-.addItemBtn:hover,
-.updateItemBtn:hover {
-  border: 0.1rem solid #dfe1e5;
-  background-color: green;
+.formGroup button {
+  background-color: #ea39ea;
   color: white;
+  border: 0.1rem solid #dfe1e5;
+  width: 30%;
+  margin: 2rem 0rem;
+  cursor: pointer;
 }
 
-/* .addItemBtn.visible {
-  display: block;
+.formGroup button:hover {
+  background-color: #fff;
+  color: #ea39ea;
+  border: 0.1rem solid #ea39ea;
+  width: 30%;
+  margin: 2rem 0rem;
+  cursor: pointer;
 }
 
-.addItemBtn.hide {
-  display: none;
-}
-
-.updateItemBtn.hide {
-  display: none;
-}
-.updateItemBtn.visible {
-  display: block;
-} */
 /* 
 ===============================================
 FOOTER

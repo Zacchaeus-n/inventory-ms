@@ -44,11 +44,6 @@ const searchHandler = () => {
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Update
             </button>        
         </td>
-        <td>
-            <button id="tdDeleteBtn" type="submit" onclick="showDeleteModalHandler(${index})" class="tdDeleteBtn">
-                <i class="fa fa-trash" aria-hidden="true"></i>Delete
-            </button> 
-        </td>
         </tr>
         
         `;

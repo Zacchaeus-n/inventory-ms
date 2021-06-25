@@ -32,7 +32,7 @@ CONTENT
 }
 */
 
-.content .row.add_item {
+/* .content .row.add_item {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -79,18 +79,28 @@ form.addItem {
 }
 
 .formGroup input:hover,
-.formGroup textarea:hover,
-.addItemBtn:hover {
+.formGroup textarea:hover {
   border: 0.1rem solid #dfe1e5;
   box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
 }
 
 .addItemBtn {
+  background-color: #ea39ea;
+  color: white;
   border: 0.1rem solid #dfe1e5;
   width: 30%;
   margin: 2rem 0rem;
   cursor: pointer;
 }
+
+.addItemBtn:hover {
+  background-color: #fff;
+  color: #ea39ea;
+  border: 0.1rem solid #ea39ea;
+  width: 30%;
+  margin: 2rem 0rem;
+  cursor: pointer;
+} */
 
 /* 
 ===============================================
