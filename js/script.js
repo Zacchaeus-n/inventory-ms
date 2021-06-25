@@ -99,14 +99,22 @@ const calculateCategory = () => {
 };
 
 totalCategoryCount = calculateCategory();
+const calculateItemStock = () => {
+  let total = 0;
+  let storeData = getProductFromStorage();
+  storeData.forEach((storeItem) => {
+    total += parseInt(storeItem.quantity);
+  });
+  return total;
+};
+
 // get the summaries
 const getItemSummary = () => {
   // retrieving products from the localstore
   let storeData = getProductFromStorage();
   totalItemCount = storeData.length;
   storeData.forEach((storeItem) => {
-    stockItemCount.push(storeItem.quantity);
-    // if (!totalCategoryCount.includes(storeItem.category)) {
+    stockItemCount.push(storeItem.quantity); // if (!totalCategoryCount.includes(storeItem.category)) {
     //   totalCategoryCount.push();
     // }
 
@@ -131,14 +139,14 @@ const getItemSummary = () => {
 getItemSummary();
 
 const summaryCalculator = (totalTally, currentValue) =>
-  totalTally + currentValue;
+  parseInt(totalTally) + parseInt(currentValue);
 
-stockItems.textContent = stockItemCount.reduce(summaryCalculator, 0);
 headphonesCount.textContent = headphoneCount.reduce(summaryCalculator, 0);
 iphonesCount.textContent = iphoneCount.reduce(summaryCalculator, 0);
 sumsungsCount.textContent = sumsungCount.reduce(summaryCalculator, 0);
-
 totalItems.textContent = totalItemCount;
+
+stockItems.textContent = calculateItemStock();
 totalCategories.textContent = totalCategoryCount.length;
 
 const noDeleteHandler = () => closeModal();
@@ -158,6 +166,7 @@ const deleteItem = (index) => {
   items.splice(index, 1);
   localStorage.setItem("products", JSON.stringify(items));
   populateData(tbody);
+  window.location.href = "./index.html";
 };
 
 /**

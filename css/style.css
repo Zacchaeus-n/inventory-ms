@@ -553,6 +553,22 @@ MEDIA QUERIES
 */
 
 @media screen and (max-width: 76.8rem) {
+  header .totalQty {
+    margin-right: 5%;
+    height: 3rem;
+    width: 3rem;
+    border: 0.1rem solid #440099;
+    border-radius: 100%;
+    text-align: center;
+    cursor: context-menu;
+  }
+
+  header .totalQty img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-left: 0;
+  }
   /* 
     REFERENCE: Responsive Data Tables
     Chris Coyier on Apr 27, 2011 (Updated on Jun 9, 2018)
@@ -566,6 +582,8 @@ MEDIA QUERIES
   td,
   tr {
     display: block;
+    font-weight: 100;
+    font-size: 1.6rem;
   }
 
   /* Hide table headers (but not display: none;, for accessibility) */
@@ -627,7 +645,7 @@ MEDIA QUERIES
     z-index: 10;
     width: 8%;
     position: fixed;
-    top: 9.2%;
+    top: 7.2%;
     left: 0;
   }
 
@@ -637,7 +655,8 @@ MEDIA QUERIES
     justify-content: flex-start;
     align-items: center;
     font-size: 1.9rem;
-    margin-left: 9rem;
+    margin-left: 5rem;
+    padding-top: 2rem;
   }
 
   .card {
@@ -649,6 +668,15 @@ MEDIA QUERIES
     flex-basis: 45%;
     flex-grow: 1;
     margin: 1rem;
+  }
+
+  .card .cardInner p {
+    font-weight: 100;
+    font-size: 1.6rem;
+  }
+
+  .card .cardInner {
+    padding: 1rem;
   }
 
   .contentData {
@@ -673,10 +701,13 @@ MEDIA QUERIES
     margin-top: 1.5rem;
   }
 
-  .summary {
-    margin: 0.5rem;
+  .formGroup button {
+    background-color: #ea39ea;
+    color: white;
+    border: 0.1rem solid #dfe1e5;
     width: 90%;
-    padding: 1.5rem;
+    margin: 2rem 0rem;
+    cursor: pointer;
   }
 
   footer img {
