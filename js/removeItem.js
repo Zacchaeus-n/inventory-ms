@@ -56,7 +56,6 @@ const searchHandler = () => {
       );
     })
     .forEach((productItem, index) => {
-      //   const tr = document.createElement("tr");
       tbody.innerHTML = `
         
         <tr data-index=${index}>
@@ -80,8 +79,6 @@ const searchHandler = () => {
         </tr>
         
         `;
-
-      //   tbody.appendChild(tr);
     });
 };
 

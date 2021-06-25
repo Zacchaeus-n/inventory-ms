@@ -12,10 +12,6 @@ const headphonesCount = topSummary.querySelector(`.headphonesCount`);
 const iphonesCount = topSummary.querySelector(`.iphoneCount`);
 const sumsungsCount = topSummary.querySelector(`.sumsungCount`);
 
-// selecting the left side list items
-// const leftSibarPaper = document.querySelector(`.leftSibarPaper`);
-// const listItemAddBtn = leftSibarPaper.querySelector(`.listItemAddBtn`);
-
 // selecting table elements
 const tbody = document.querySelector(`tbody`);
 const updateBtn = tbody.querySelector(`.tdUpdateBtn`);
@@ -114,9 +110,7 @@ const getItemSummary = () => {
   let storeData = getProductFromStorage();
   totalItemCount = storeData.length;
   storeData.forEach((storeItem) => {
-    stockItemCount.push(storeItem.quantity); // if (!totalCategoryCount.includes(storeItem.category)) {
-    //   totalCategoryCount.push();
-    // }
+    stockItemCount.push(storeItem.quantity);
 
     switch (storeItem.category) {
       case `Headphone`:
@@ -210,8 +204,6 @@ const populateData = (displayArea) => {
   productData = JSON.parse(localStorage.getItem("products"));
   displayArea.innerHTML = productData
     .map((productItem, index) => {
-      //   console.log(productItem);
-      //   console.log(index);
       return `
         
         <tr data-index=${index}>
@@ -257,9 +249,3 @@ const populateFieldsHandler = (index) => {
   localStorage.setItem(`updateStore`, JSON.stringify(index));
   window.location.href = `/html/updateItemDetails.html`;
 };
-
-/**
- * setTimeout(() => {
-    elementDiv.remove()
-}, 1500);
- */

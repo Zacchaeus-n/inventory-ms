@@ -21,7 +21,6 @@ const populateFieldsHandler = () => {
   let categoryOpt = category.options[category.selectedIndex];
   // retrieving products from the localstore
   let storeData = getProductFromStorage();
-  console.log(storeData);
   //   populating modal update form with slected item data
   title.value = storeData[index].title;
   description.value = storeData[index].description;
@@ -36,9 +35,6 @@ populateFieldsHandler();
 const updateItemHandler = (e) => {
   e.preventDefault();
   let categoryOpt = category.options[category.selectedIndex];
-  // retrieving index from hidden input
-  //   const index = updateIndex.value;
-  // retrieving products from the localstore
   let storeData = getProductFromStorage();
 
   //   new updates object
@@ -54,10 +50,6 @@ const updateItemHandler = (e) => {
   storeData[index] = updateObject;
   localStorage.setItem(`products`, JSON.stringify(storeData));
   window.location.href = `/index.html`;
-  //   calling the populateData function to display updated data
-  //   populateData(tbody);
-  //   clearInputs();
-  //   closeModal();
 };
 
 updateItemBtn.addEventListener(`click`, updateItemHandler);

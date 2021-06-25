@@ -19,32 +19,40 @@ const getProductFromStorage = () => {
  * ==================================
  */
 
+// clear the input fields
+const clearInputs = () => {
+  // clear inputs
+  newItemName.value = "";
+  newItemDesc.value = "";
+  newQuantity.value = "";
+};
+
 const getNewDataHandler = (e) => {
   e.preventDefault();
   const newCategoryOpt = newCategory.options[newCategory.selectedIndex];
   // retrieving products from the localstore
   let storeData = getProductFromStorage();
+  if (
+    newItemName.value !== "" &&
+    newCategoryOpt.value !== "" &&
+    newItemDesc.value !== "" &&
+    newQuantity.value !== ""
+  ) {
+    let newItemObj = {
+      id: storeData.length + 1,
+      title: newItemName.value.trim(),
+      category: newCategoryOpt.value,
+      description: newItemDesc.value.trim(),
+      quantity: newQuantity.value,
+    };
+    storeData.push(newItemObj);
 
-  //   console.log(storeData);
-  //   populating modal update form with slected item data
-  let newItemObj = {
-    id: storeData.length + 1,
-    title: newItemName.value,
-    image: `/assets/images/products/sumsung/samsung1.jpeg`,
-    price: 340,
-    category: newCategoryOpt.value,
-    description: newItemDesc.value,
-    quantity: newQuantity.value,
-  };
-  storeData.push(newItemObj);
-  //   console.log(storeData);
-
-  // update localstore with updateObject at index position
-  //   storeData[index] = newItemObj;
-  localStorage.setItem(`products`, JSON.stringify(storeData));
-
-  //   //   calling the populateData function to display updated data
-  // populateData(storeData, tbody);
+    localStorage.setItem(`products`, JSON.stringify(storeData));
+    alert(`Item Added Successfully`);
+    clearInputs();
+  } else {
+    alert(`Please Provide All Missing Values`);
+  }
 };
 
 addNewItemBtn.addEventListener(`click`, getNewDataHandler);

@@ -668,15 +668,12 @@ MEDIA QUERIES
     flex-basis: 45%;
     flex-grow: 1;
     margin: 1rem;
+    padding: 2rem;
   }
 
   .card .cardInner p {
     font-weight: 100;
     font-size: 1.6rem;
-  }
-
-  .card .cardInner {
-    padding: 1rem;
   }
 
   .contentData {
