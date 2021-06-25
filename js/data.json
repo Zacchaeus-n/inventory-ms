@@ -1,0 +1,163 @@
+{
+    "products": [{
+            "id": 1,
+            "title": "Apple iPhone 4",
+            "category": "IPhone",
+            "description":"White color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":15
+        },
+
+        {
+            "id": 2,
+            "title": "Sony WH-CH510",
+            "category": "Headphone",
+            "description":"Black color support automatic switchover",
+            "quantity":0        },
+        {
+            "id": 3,
+            "title": "Apple iPhone 5",
+            "category": "IPhone",
+            "description":"Black color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":25
+        },
+        {
+            "id": 4,
+            "title": "Apple iPhone 6",
+            "category": "IPhone",
+            "description":"White color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":0
+        },
+        {
+            "id": 5,
+            "title": "Sony WH-CH511",
+            "category": "Headphone",
+            "description":"Yellow color, remote contol capabilities",
+            "quantity":5        },
+
+        {
+            "id": 6,
+            "title": "Sony WH-CH512",
+            "category": "Headphone",
+            "description":"Black color support A2DP function",
+            "quantity":35        },
+        {
+            "id": 7,
+            "title": "Apple iPhone 11 Pro",
+            "category": "IPhone",
+            "description":"Black color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":25        },
+        {
+            "id": 8,
+            "title": "Sony WH-CH513",
+            "category": "Headphone",
+            "description":"Blue color, noise reduction",
+            "quantity":14        },
+        {
+            "id": 9,
+            "title": "Apple iPhone 7",
+            "category": "IPhone",
+            "description":"White color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":25        },
+        {
+            "id": 10,
+            "title": "Sony WH-CH514",
+            "category": "Headphone",
+            "description":"White color, the output frequency:class2",
+            "quantity":0
+        },
+        {
+            "id": 11,
+            "title": "Sony WH-CH515",
+            "category": "Headphone",
+            "description":"Black color, stanby time:15hrs",
+            "quantity":15
+        },
+        {
+            "id": 12,
+            "title": "Sony WH-CH516",
+            "category": "Headphone",
+            "description":"Red color, operating frequency:2.4ghz",
+            "quantity":0
+        },
+        {
+            "id": 13,
+            "title": "Samsung Galaxy Spark",
+            "category": "Samsung",
+            "description":"Yellow color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":0        },
+        {
+            "id": 14,
+            "title": "Samsung Galaxy S7",
+            "category": "Samsung",
+            "description": "Blue color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":0
+        },
+        {
+            "id": 15,
+            "title": "Apple iPhone 11",
+            "category": "IPhone",
+            "description":"White color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":26        },
+        {
+            "id": 16,
+            "title": "Sony WH-CH517",
+            "category": "Headphone",
+            "description":"Blue color, talk time:6hrs",
+            "quantity":20
+        },
+        {
+            "id": 17,
+            "title": "Samsung Galaxy S3",
+            "category": "Samsung",
+            "description":"Violet color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":42        },
+        {
+            "id": 18,
+            "title": "Sony WH-CH518",
+            "category": "Headphone",
+            "description":"Black color, USB charging cable",
+            "quantity":31
+        },
+        {
+            "id": 19,
+            "title": "Sony WH-CH519",
+            "category": "Headphone",
+            "description":"Blue color, scope of work:10m",
+            "quantity":19        },
+        {
+            "id": 20,
+            "title": "Samsung WH56",
+            "category": "Samsung",
+            "description":"Yellow color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":17
+        },
+        {
+            "id": 21,
+            "title": "Sony WH-CH520",
+            "category": "Headphone",
+            "description":"Black color, compatible with 5.0",
+            "quantity":15
+        },
+        {
+            "id": 22,
+            "title": "Samsung Galaxy S5",
+            "category": "Samsung",
+            "description": "Blue color, support wireless 5.0",
+            "quantity":22        },
+        {
+            "id": 23,
+            "title": "Samsung Galaxy",
+            "category": "Samsung",
+            "description":"Yellow color, sensor:G-Sensor, battery:5000mAh",
+            "quantity":51        },
+        {
+            "id": 24,
+            "title": "Sony WH-CH521",
+            "category": "Headphone",
+            "description":"Black color, Driver Unit: 40mm diameter",
+            "quantity":24
+        }
+
+    ]
+}
+

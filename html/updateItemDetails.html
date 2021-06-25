@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAAZ | IMS | Update Item Details</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- font awesome icons -->
+    <!-- <script src="https://use.fontawesome.com/f86fde9ae9.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="../assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <header>
+        <img class="logo" src="../assets/images/logoppbg.PNG" alt="logo" />
+        <span class="totalQty" title="Profile Image">
+          <img src="../assets/images/photo.PNG" alt="Profile Image" />
+        </span>
+      </header>
+      <div class="dashboard">
+        <div class="leftSibar">
+          <div class="leftbar">
+            <i
+              title="Dashboard Menu"
+              class="fa fa-bars burger"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="leftSibarPaper">
+            <ul>
+              <li>
+                <i class="fa fa-tachometer" aria-hidden="true"></i
+                ><a href="../index.html">Dashboard</a>
+              </li>
+               <span class="profileImage" title="Profile Image">
+                <img src="../assets/images/photo.PNG" alt="Profile Image" />
+              </span>
+              <li>
+                <i class="fa fa-plus-square-o" aria-hidden="true"></i
+                ><a href="addItem.html">Add Item</a>
+              </li>
+              <li>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i
+                ><a href="updateItemDetails.html">Update Item</a>
+              </li>
+              <li>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i
+                ><a href="updateQuantity.html">Update Quantity</a>
+              </li>
+              <li>
+                <i class="fa fa-trash" aria-hidden="true"></i
+                ><a href="removeItem.html">Remove Item</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contentSummary">
+           <div class="content">
+            <div class="row update_item">
+              <h1>UPDATE ITEM DETAILS</h1>
+              <form class="addItem">
+                <div class="formGroup">
+                  <label for="newItemName">Item Name</label>
+                  <input
+                    id="itemName"
+                    type="text"
+                    name="newItemName"
+                    placeholder="Item Name"
+                    required
+                  />
+                </div>
+                <div class="formGroup">
+                  <label for="newItemDesc">Item Description</label>
+                  <textarea
+                    id="itemDesc"
+                    name="newItemDesc"
+                    rows="3"
+                    placeholder="Item Description"
+                    required
+                  ></textarea>
+                </div>
+                <div class="formGroup">
+                  <select name="newCategory" id="category">
+                    <option selected disabled>--- Category ---</option>
+                    <option value="Headphones">Headphones</option>
+                    <option value="Iphones">Iphones</option>
+                    <option value="Sumsung">Sumsung</option>
+                  </select>
+                </div>
+                <div class="formGroup">
+                  <label for="newQuantity">Quantity Available</label>
+                  <input
+                    id="quantity"
+                    type="number"
+                    min="0"
+                    name="newQuantity"
+                  />
+                </div>
+                <button id="updateItemBtn" type="submit" class="updateItemBtn">
+                  Update Item
+                </button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <small><img src="../assets/images/logowbg.PNG" alt="logo" /></small>
+      </footer>
+    </div>
+    <script src="../js/updateItem.js"></script>
+  </body>
+</html>

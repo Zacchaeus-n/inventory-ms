@@ -1,0 +1,705 @@
+/* 
+font colors: #bbdde6, #440099
+logo bg color, header color, shadow color, border color : #ea39ea
+ border: 0.1rem solid #dfe1e5;
+ box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+
+ .hero__img__wrap {
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+  margin-bottom: 2px;
+  border-radius: 9px;
+  transition: transform 450ms;
+}
+.hero__img__wrap:hover {
+  transform: scale(1.08); 
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.095);
+  cursor: copy;
+}
+*/
+html {
+  font-size: 62.5%; /*10px*/
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+
+/* 
+===============================================
+MAIN CONTAINER
+===============================================
+*/
+
+.mainContainer {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 7rem;
+}
+
+/* 
+===============================================
+HEADER
+===============================================
+*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ea39ea;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header img {
+  width: 30%;
+  cursor: pointer;
+}
+
+header .totalQty {
+  margin-right: 5rem;
+  color: white;
+  height: 4rem;
+  width: 4rem;
+  border: 0.3rem solid white;
+  border-radius: 100%;
+  text-align: center;
+  cursor: context-menu;
+}
+
+header .totalQty img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+/* 
+===============================================
+DASHBOARD
+===============================================
+*/
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 0.5rem;
+  margin-top: 6.5%;
+  width: 100%;
+}
+/* 
+===============================================
+LEFT SIDEBAR
+===============================================
+*/
+.leftSibar {
+  background-color: #ea39ea;
+  width: 5%;
+  min-height: 100vh;
+  position: fixed;
+  top: 11.5%;
+  left: 0;
+  transform-style: preserve-3d;
+  perspective: 100rem;
+}
+
+.leftSibar .burger {
+  color: white;
+  margin: 0.5rem;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.leftbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ea39ea;
+  box-shadow: 0 0.8rem 3.2rem 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4rem);
+}
+
+.leftSibarPaper {
+  border: 0.1rem solid #ea39ea;
+  position: absolute;
+  left: 6.3rem;
+  top: 0;
+  width: 400%;
+  min-height: 100vh;
+  box-shadow: 0 0.8rem 3.2rem 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4rem);
+  transition: transform 0.6s linear;
+  backface-visibility: hidden;
+  transform-origin: left;
+  transform: perspective(100rem) rotateY(90deg);
+}
+
+.leftSibar:hover .leftSibarPaper {
+  transform: rotateY(0deg);
+}
+
+.leftSibarPaper ul {
+  font-size: 2rem;
+  padding-left: 1.5rem;
+}
+
+.leftSibarPaper ul li {
+  list-style: none;
+  margin: 3rem 1rem 3rem 0;
+  padding: 1rem 1rem 1rem 0;
+  width: 90%;
+  color: #440099;
+  cursor: pointer;
+  transition: transform 450ms ease-in-out;
+}
+
+.leftSibarPaper ul li:hover {
+  transform: scale(1.08);
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.095);
+}
+
+.leftSibarPaper ul .fa {
+  color: #ea39ea;
+  margin-right: 1.5rem;
+  font-size: 2rem;
+}
+
+.profileImage img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+/* 
+===============================================
+CONTENT SUMMARY
+===============================================
+*/
+.contentSummary {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 5%;
+  width: 100%;
+}
+
+/* 
+===============================================
+CONTENT
+===============================================
+*/
+.topSummary {
+  width: 100%;
+  margin-left: 0.5rem;
+}
+
+.itemSummary,
+.categorySummary {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #fff;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 32%;
+}
+
+.card .cardInner {
+  margin: 2rem;
+}
+
+.card .fa {
+  font-size: 4rem;
+  color: orange;
+}
+
+.cardInner p {
+  font-size: 1.8rem;
+  color: #440099;
+}
+
+.cardInner span {
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.card:hover {
+  border: 0.1rem solid #ea39ea;
+  box-shadow: 0 0.1rem 0.6rem #ea39ea;
+}
+
+.contentData {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  background-color: white;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+  width: 98%;
+  margin: 2rem 0.5rem;
+}
+
+.content .row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.content .row table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #f8f8f8;
+}
+th {
+  background: #440099;
+  color: #bbdde6;
+  font-weight: bold;
+}
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+td .tdUpdateBtn {
+  color: green;
+  cursor: pointer;
+  border: 0.1rem solid green;
+}
+
+td .tdDeleteBtn {
+  color: red;
+  cursor: pointer;
+  border: 0.1rem solid red;
+}
+
+td .fa.fa-pencil-square-o {
+  margin: 0.5rem;
+}
+
+td .fa.fa-trash {
+  margin: 0.5rem;
+}
+
+/* STATUS DISPLAY */
+.outOfStock {
+  color: red;
+}
+.aOutOfStock {
+  color: orange;
+}
+.inStock {
+  color: green;
+}
+/* 
+===============================================
+RIGHT SUMMARY
+===============================================
+*/
+.summary {
+  background-color: white;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+  width: 95.5%;
+  padding: 1.5rem;
+}
+/* 
+===============================================
+MODAL FOR UPDATING ITEMS
+===============================================
+*/
+
+.modal__outer {
+  display: grid;
+  background: hsla(90, 100%, 5%, 0.7);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  justify-content: center;
+  align-items: center;
+  /* hiding the modal */
+  opacity: 0;
+  pointer-events: none; /* do not listen to any events */
+  /* animation transition */
+  transition: opacity 0.5s;
+}
+
+/* open/show the modal */
+.modal__outer.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__inner {
+  max-width: 70rem;
+  width: 100%;
+  min-width: 60rem;
+  border-radius: 0.4rem;
+  background: white;
+  text-align: center;
+  transform: translateY(200%); /*pushes it up, off the browser*/
+  transition: transform 2s; /*animate the transform property over 2sec*/
+}
+
+/* when the outer modal has inner modal do like so */
+.modal__outer.open .modal__inner {
+  transform: translateY(0%); /* back to original position*/
+}
+
+.decisionZone {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.decisionZone button {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.confirmDelete_title {
+  margin: 0;
+  padding: 1rem;
+  background: red;
+  color: white;
+}
+
+.confirmDelete_msg {
+  padding: 1rem;
+}
+
+.decisionZone .btnYes {
+  border: 0.1rem solid transparent;
+  color: white;
+  background-color: tomato;
+}
+
+.btnYes:hover {
+  border: 0.1rem solid tomato;
+  background-color: white;
+  color: tomato;
+}
+
+.decisionZone .btnNo {
+  border: 0.1rem solid transparent;
+  color: white;
+  background-color: rgb(41, 30, 30);
+}
+
+.btnNo:hover {
+  border: 0.1rem solid rgb(41, 30, 30);
+  background-color: white;
+  color: rgb(41, 30, 30);
+}
+
+.UpdateMsg {
+  color: green;
+  font-size: 2rem;
+  width: max-content;
+  padding: 2.5rem;
+  background-color: #fff;
+  position: absolute;
+  top: 4rem;
+  border: 0.1rem solid #ea39ea;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+  transform: translateY(-160%); /*hide*/
+  transition: transform 450ms ease-in-out;
+}
+
+.UpdateMsg.open {
+  transform: translateY(0%); /*hide*/
+}
+
+h1 {
+  font-size: 2rem;
+  color: #440099;
+}
+
+form.addItem {
+  width: 100%;
+  align-content: center;
+  font-weight: 500;
+  color: #ea39ea;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin: 2rem 2rem 2rem 5rem;
+}
+
+.formGroup input,
+.formGroup textarea,
+.addItemBtn,
+.updateItemBtn,
+#category {
+  width: 80%;
+  margin-top: 1rem;
+  padding: 1rem;
+  outline: none;
+  border: 0.1rem solid #dfe1e5;
+  border-radius: 0.5rem;
+  transition: box-shadow 150ms ease-in-out;
+}
+
+#category {
+  width: 83.4%;
+}
+
+.formGroup input:hover,
+.formGroup textarea:hover,
+.addItemBtn:hover,
+.updateItemBtn:hover,
+#category:hover {
+  border: 0.1rem solid #dfe1e5;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+}
+
+.addItemBtn,
+.updateItemBtn {
+  border: 0.1rem solid #ea39ea;
+  background-color: white;
+  color: #ea39ea;
+  width: 30%;
+  margin: 0 0rem 0 20rem;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+}
+
+.addItemBtn:hover,
+.updateItemBtn:hover {
+  border: 0.1rem solid #dfe1e5;
+  background-color: green;
+  color: white;
+}
+
+/* .addItemBtn.visible {
+  display: block;
+}
+
+.addItemBtn.hide {
+  display: none;
+}
+
+.updateItemBtn.hide {
+  display: none;
+}
+.updateItemBtn.visible {
+  display: block;
+} */
+/* 
+===============================================
+FOOTER
+===============================================
+*/
+
+footer {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+footer img {
+  width: 10%;
+}
+/* 
+===============================================
+MEDIA QUERIES
+===============================================
+*/
+
+@media screen and (max-width: 76.8rem) {
+  /* 
+    REFERENCE: Responsive Data Tables
+    Chris Coyier on Apr 27, 2011 (Updated on Jun 9, 2018)
+    https://css-tricks.com/responsive-data-tables/
+  */
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 0.1rem solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0.6rem;
+    left: 0.6rem;
+    width: 45%;
+    padding-right: 1rem;
+    white-space: nowrap;
+  }
+
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: "No.";
+  }
+  td:nth-of-type(2):before {
+    content: "Name";
+  }
+  td:nth-of-type(3):before {
+    content: "Description";
+  }
+  td:nth-of-type(4):before {
+    content: "Category";
+  }
+  td:nth-of-type(5):before {
+    content: "Quantuty Available";
+  }
+  td:nth-of-type(6):before {
+    content: "Status";
+  }
+  td:nth-of-type(7):before {
+    content: "Actions";
+  }
+
+  .leftSibar {
+    z-index: 10;
+    width: 8%;
+    position: fixed;
+    top: 9.2%;
+    left: 0;
+  }
+
+  .contentSummary {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.9rem;
+    margin-left: 9rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-basis: 45%;
+    flex-grow: 1;
+    margin: 1rem;
+  }
+
+  .contentData {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+  }
+
+  .content {
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+    width: 97%;
+    margin: 0.5rem;
+  }
+
+  .content .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+  }
+
+  .summary {
+    margin: 0.5rem;
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  footer img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  header img {
+    margin-left: 2rem;
+  }
+
+  header .totalQty {
+    margin: 1rem;
+  }
+
+  .leftSibar {
+    width: 15%;
+  }
+
+  footer img {
+    width: 30%;
+  }
+}

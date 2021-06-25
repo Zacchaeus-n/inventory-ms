@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAAZ | IMS | Update Quantity</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- font awesome icons -->
+    <!-- <script src="https://use.fontawesome.com/f86fde9ae9.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="../assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <header>
+        <img class="logo" src="../assets/images/logoppbg.PNG" alt="logo" />
+        <div class="search">
+          <input type="text" placeholder="  " />
+          <span></span>
+        </div>
+        <span class="totalQty" title="Profile Image">
+          <img src="../assets/images/photo.PNG" alt="Profile Image" />
+        </span>
+      </header>
+      <div class="dashboard">
+        <div class="leftSibar">
+          <div class="leftbar">
+            <i
+              title="Dashboard Menu"
+              class="fa fa-bars burger"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="leftSibarPaper">
+            <ul>
+              <li>
+                <i class="fa fa-tachometer" aria-hidden="true"></i
+                ><a href="../index.html">Dashboard</a>
+              </li>
+              <span class="profileImage" title="Profile Image">
+                <img src="../assets/images/photo.PNG" alt="Profile Image" />
+              </span>
+              <li>
+                <i class="fa fa-plus-square-o" aria-hidden="true"></i
+                ><a href="addItem.html">Add Item</a>
+              </li>
+              <li>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i
+                ><a href="updateItemDetails.html">Update Item</a>
+              </li>
+              <li>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i
+                ><a href="updateQuantity.html">Update Quantity</a>
+              </li>
+              <li>
+                <i class="fa fa-trash" aria-hidden="true"></i
+                ><a href="removeItem.html">Remove Item</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contentSummary">
+          <h1>UPDATE QUANTITY</h1>
+          <div class="content">
+            <div class="row">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Quantuty Available</th>
+                    <th>Status</th>
+                    <th colspan="2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- ITEMS WILL BE DISPLAYED HERE -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="summary">
+            <div class="row">
+              <div class="col">Number of Items in Stock</div>
+              <div class="col">Items in Stock</div>
+              <div class="col">total number of categories</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <small><img src="../assets/images/logowbg.PNG" alt="logo" /></small>
+      </footer>
+    </div>
+    <script src="../js/search.js"></script>
+    <script src="../js/updateQuantity.js"></script>
+  </body>
+</html>

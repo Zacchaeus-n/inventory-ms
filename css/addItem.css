@@ -1,0 +1,133 @@
+/* 
+font colors: #bbdde6, #440099
+logo bg color, header color, shadow color, border color : #ea39ea
+ border: 0.1rem solid #dfe1e5;
+ box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+
+ .hero__img__wrap {
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+  margin-bottom: 2px;
+  border-radius: 9px;
+  transition: transform 450ms;
+}
+.hero__img__wrap:hover {
+  transform: scale(1.08); 
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.095);
+  cursor: copy;
+}
+*/
+
+/* 
+===============================================
+CONTENT
+===============================================
+*/
+/* .content {
+  background-color: white;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+  width: 72%;
+  margin-left: 0.5rem;
+}
+*/
+
+.content .row.add_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #440099;
+}
+
+form.addItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.formGroup input,
+.formGroup textarea,
+.addItemBtn,
+#newCategory {
+  width: 80%;
+  margin: 1rem 0;
+  padding: 1rem;
+  outline: none;
+  border: 0.1rem solid #dfe1e5;
+  border-radius: 0.5rem;
+  transition: box-shadow 150ms ease-in-out;
+}
+
+#newCategory {
+  width: 82%;
+}
+
+.formGroup input:hover,
+.formGroup textarea:hover,
+.addItemBtn:hover {
+  border: 0.1rem solid #dfe1e5;
+  box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+}
+
+.addItemBtn {
+  border: 0.1rem solid #dfe1e5;
+  width: 30%;
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+/* 
+===============================================
+MEDIA QUERIES
+===============================================
+*/
+
+@media screen and (max-width: 76.8rem) {
+  .content {
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.6rem rgb(32 33 36 / 28%);
+    width: 97%;
+    margin: 0.5rem;
+  }
+
+  .content .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .addItemBtn {
+    border: 0.1rem solid #dfe1e5;
+    width: 30%;
+    /* margin: 0 2rem 2rem 3rem; */
+  }
+
+  .formGroup {
+    margin: 2rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea,
+  .addItemBtn {
+    width: 80%;
+  }
+}
